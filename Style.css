@@ -1,0 +1,121 @@
+/* --- Basic Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* --- Body Style --- */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* --- Header --- */
+  header {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* --- Navbar --- */
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  nav a:hover {
+    background: #575757;
+    transform: scale(1.1);
+    border-radius: 8px;
+  }
+  
+  /* --- Section --- */
+  section {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* --- Interaktif Hover Panel --- */
+  section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  
+  /* --- Section Heading --- */
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0073e6;
+  }
+  
+  /* --- List --- */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+  }
+  
+  /* --- Contact Links --- */
+  #contact a {
+    color: #0073e6;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  #contact a:hover {
+    color: #005bb5;
+  }
+  
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
