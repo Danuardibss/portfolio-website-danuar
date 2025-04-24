@@ -30,3 +30,13 @@ footer {
 section {
   margin-bottom: 2em;
 }
+
+.panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1em;
+    margin-bottom: 2em;
+    border: 1px solid #a855f7;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #a855f7;
+  }
+  
