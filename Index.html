@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,59 @@
   <title>Portfolio Danuar Asmoro</title>
   <link rel="stylesheet" href="Cyberpunk.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    nav a {
+      padding: 0.5rem 1rem;
+      border: 1px solid #a855f7;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 8px #a855f7;
+    }
+
+    section {
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .panel {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .panel:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #f472b6;
+    }
+  </style>
+</head>
+
+<body>
   <header>
     <h1>Danuar Asmoro</h1>
-    <p>Networking & Cybersecurity Explorer | SEO Copywriter | Future Linux SysAdmin</p>
+    <p id="tagline"></p>
   </header>
 
   <nav>
@@ -22,16 +70,13 @@
     <a href="#contact">Kontak</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="panel">
     <h2>Tentang Saya</h2>
-    <p> Saya Danuar, siswa jurusan Teknik Jaringan Komputer dan Telekomunikasi di SMK Wikrama Bogor.
-        Saya memiliki passion dalam bidang jaringan komputer, Linux Server Management, pengembangan website, serta digital marketing (SEO).
-        Saya sedang memperdalam skill di bidang networking dan cybersecurity melalui berbagai kursus online seperti Cisco NetAcad, ID-Networkers, Udemy, dan lain-lain.
-        
-        Target saya adalah berkarir di dunia IT, khususnya di bagian software dan digital infrastructure development.</p>
+    <p>Saya Danuar, siswa jurusan Teknik Jaringan Komputer dan Telekomunikasi di SMK Wikrama Bogor. Saya memiliki passion dalam bidang jaringan komputer, Linux Server Management, pengembangan website, serta digital marketing (SEO). Saya sedang memperdalam skill di bidang networking dan cybersecurity melalui berbagai kursus online seperti Cisco NetAcad, ID-Networkers, Udemy, dan lain-lain.
+      Target saya adalah berkarir di dunia IT, khususnya di bagian software dan digital infrastructure development.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="panel">
     <h2>Project Saya</h2>
     <ul>
       <li>Belajar Dasar Networking (Cisco Networking Basics)</li>
@@ -40,7 +85,7 @@
     </ul>
   </section>
 
-  <section id="certificates">
+  <section id="certificates" class="panel">
     <h2>Sertifikat</h2>
     <ul>
       <li>Cisco Networking Basics</li>
@@ -52,22 +97,35 @@
     </ul>
   </section>
 
-  <section id="contact">
-      <h2 class="text-2xl font-bold text-blue-600">Kontak Saya</h2>
-      <p>Email: danuarasmoro@gmail.com</p>
-      <p>
-        <a href="https://www.linkedin.com/in/danuar-asmoro-46a16931b/" target="_blank" aria-label="LinkedIn" style="margin-right: 10px;">
-          <i class="fab fa-linkedin fa-2x" style="color:#0e76a8;"></i>
-        </a>
-        <a href="https://www.instagram.com/dn.smorsss/" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram fa-2x" style="color:#e4405f;"></i>
-        </a>
+  <section id="contact" class="panel">
+    <h2>Kontak Saya</h2>
+    <p>Email: danuarasmoro@gmail.com</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danuar-asmoro-46a16931b/" target="_blank" aria-label="LinkedIn" style="margin-right: 10px;">
+        <i class="fab fa-linkedin fa-2x" style="color:#0e76a8;"></i>
+      </a>
+      <a href="https://www.instagram.com/dn.smorsss/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram fa-2x" style="color:#e4405f;"></i>
+      </a>
+    </p>
+  </section>
 
-      </p>
-    </div>
   <footer>
     <p>©2025 Danuar Asmoro. All rights reserved.</p>
   </footer>
 
+  <script>
+    const text = "Networking & Cybersecurity Explorer | SEO Copywriter | Future Linux SysAdmin";
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("tagline").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 50);
+      }
+    }
+    window.onload = typeEffect;
+  </script>
 </body>
+
 </html>
