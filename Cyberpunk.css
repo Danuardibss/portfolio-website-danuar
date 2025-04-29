@@ -38,5 +38,11 @@ section {
     border: 1px solid #a855f7;
     border-radius: 8px;
     box-shadow: 0 0 15px #a855f7;
-  }
+    max-width: 700px; /* atau cobain 600px kalau mau lebih ramping */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #b76df2;
+}
   
