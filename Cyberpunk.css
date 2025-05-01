@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* cyberpunk.css */
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Press Start 2P', monospace;
     background-color: #0d0d2b;
     color: #ffffff;
     line-height: 1.6;
